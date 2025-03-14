@@ -22,7 +22,7 @@ This project is a simple web application that allows users to rate different typ
 
 1. Clone this repository to your local machine:
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/George-Dev-Web/ramen
    ```
 2. Navigate to the project directory:
    ```sh
@@ -38,8 +38,8 @@ This project is a simple web application that allows users to rate different typ
 
 For any questions or suggestions, please contact:
 
-- **Email:** [george.mwazuna1@student.moringaschool.com](Email)
-- **GitHub:** [Your GitHub Profile](https://github.com/your-profile)
+- **Email:** (george.mwazuna1@student.moringaschool.com)[Email]
+- **GitHub:** [My GitHub Profile](https://github.com/George-Dev-Web)
 
 ## Future Improvements
 
