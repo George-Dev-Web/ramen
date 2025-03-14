@@ -38,7 +38,7 @@ This project is a simple web application that allows users to rate different typ
 
 For any questions or suggestions, please contact:
 
-- **Email:** (george.mwazuna1@student.moringaschool.com)[Email]
+- **Email:** [Email](george.mwazuna1@student.moringaschool.com)
 - **GitHub:** [My GitHub Profile](https://github.com/George-Dev-Web)
 
 ## Future Improvements
