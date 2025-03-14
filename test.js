@@ -1,5 +1,6 @@
 const ramens = [
   {
+    id: 1,
     name: "Shoyu Ramen",
     restaurant: "Ichiran",
     image: "shoyu.jpg",
@@ -7,32 +8,18 @@ const ramens = [
     comment: "Delicious!",
   },
   {
-    name: "Gyukotsu Ramen",
-    restaurant: "Gyu House",
-    image: "gyukotsu.jpg",
+    id: 2,
+    name: "Miso Ramen",
+    restaurant: "Menya",
+    image: "miso.jpg",
     rating: 4,
-    comment: "Savory and rich!",
+    comment: "Very flavorful!",
   },
   {
-    name: "Kojiro Ramen",
-    restaurant: "Kojiro Noodles",
-    image: "kojiro.jpg",
-    rating: 4.5,
-    comment: "Great balance of flavors!",
-  },
-  {
-    name: "Naruto Ramen",
-    restaurant: "Hidden Leaf Kitchen",
-    image: "naruto.jpg",
-    rating: 5,
-    comment: "A true classic!",
-  },
-  {
-    name: "Nirvana Ramen",
-    restaurant: "Ramen Bliss",
-    image: "nirvana.jpg",
-    rating: 4.8,
-    comment: "Absolutely amazing!",
+    id: 3,
+    name: "Tonkotsu Ramen",
+    restaurant: "Ramen-ya",
+    image: "tonkotsu.jpg",
   },
 ];
 
@@ -43,7 +30,6 @@ function displayRamens() {
   ramens.forEach((ramen) => {
     const img = document.createElement("img");
     img.src = ramen.image;
-    img.alt = ramen.name;
     img.addEventListener("click", () => showDetails(ramen));
     menu.appendChild(img);
   });
