@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 20px;
+}
+
+#ramen-menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: white;
+  border-bottom: 2px solid black;
+}
+
+#ramen-menu img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid black;
+  transition: transform 0.2s;
+}
+
+#ramen-menu img:hover {
+  transform: scale(1.1);
+}
+
+#ramen-detail {
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border: 2px solid black;
+  width: 50%;
+}
+
+#detail-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  width: 50%;
+  margin: auto;
+  border: 2px solid black;
+}
+
+input,
+button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+}
+
+button {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: darkgray;
+}
