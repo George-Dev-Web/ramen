@@ -104,17 +104,32 @@ function addSubmitListener() {
     });
 }
 
+document.addEventListener("DOMContentLoaded", main);
 // Initialize app
 function main() {
   displayRamens();
   addSubmitListener();
   showDetails(ramens[0], 0); // Show first ramen on load
 
-  const deleteButton = document.createElement("button");
-  deleteButton.id = "delete-ramen";
-  deleteButton.textContent = "Delete Ramen";
+  const deleteButton = document.getElementById("delete-ramen");
   deleteButton.style.display = "none";
-  document.getElementById("ramen-detail").appendChild(deleteButton);
+
+  document.getElementById("ramen-detail").addEventListener("mouseenter", () => {
+    deleteButton.style.display = "block";
+  });
+  document.getElementById("ramen-detail").addEventListener("mouseleave", () => {
+    deleteButton.style.display = "none";
+  });
+
+  deleteButton.addEventListener("click", () => {
+    const currentRamenName = document.getElementById("detail-name").textContent;
+    const ramenIndex = ramens.findIndex(
+      (ramen) => ramen.name === currentRamenName
+    );
+    if (ramenIndex !== -1) {
+      deleteRamen(ramenIndex);
+    }
+  });
 }
 
 document.addEventListener("DOMContentLoaded", main);

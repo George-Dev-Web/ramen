@@ -1,9 +1,10 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #f8f8f8;
+  background-color: black;
   margin: 0;
   padding: 20px;
+  color: white;
 }
 
 #ramen-menu {
@@ -11,8 +12,8 @@ body {
   justify-content: center;
   gap: 10px;
   padding: 10px;
-  background-color: white;
-  border-bottom: 2px solid black;
+  background-color: black;
+  border-bottom: 2px solid wheat;
 }
 
 #ramen-menu img {
@@ -32,9 +33,10 @@ body {
 #ramen-detail {
   margin: 20px auto;
   padding: 20px;
-  background: white;
-  border: 2px solid black;
+  background: none;
+  border: 2px solid white;
   width: 50%;
+  columns: white;
 }
 
 #detail-image {
@@ -44,11 +46,11 @@ body {
 }
 
 form {
-  background: white;
+  background: none;
   padding: 20px;
   width: 50%;
   margin: auto;
-  border: 2px solid black;
+  border: 2px solid white;
 }
 
 input,
@@ -57,14 +59,50 @@ button {
   width: 100%;
   margin: 10px 0;
   padding: 8px;
+  background-color: white;
 }
 
 button {
-  background: black;
+  background: gray;
   color: white;
   cursor: pointer;
 }
 
 button:hover {
   background: darkgray;
+}
+#delete-ramen {
+  display: none;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#ramen-detail:hover #delete-ramen {
+  display: block;
+}
+#delete-ramen {
+  display: none; /* Initially hidden */
+}
+
+#ramen-detail:hover #delete-ramen {
+  display: block; /* Show only when hovering over ramen details */
+}
+#delete-ramen {
+  display: none; /* Initially hidden */
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 8px; /* Rounded edges */
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#ramen-detail:hover #delete-ramen {
+  display: block; /* Show only when hovering over ramen details */
 }
