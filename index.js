@@ -40,22 +40,47 @@ const ramens = [
 function displayRamens() {
   const menu = document.getElementById("ramen-menu");
   menu.innerHTML = "";
-  ramens.forEach((ramen) => {
+  ramens.forEach((ramen, index) => {
     const img = document.createElement("img");
     img.src = ramen.image;
     img.alt = ramen.name;
-    img.addEventListener("click", () => showDetails(ramen));
+    img.addEventListener("click", () => showDetails(ramen, index));
     menu.appendChild(img);
   });
 }
 
 // Show ramen details
-function showDetails(ramen) {
+function showDetails(ramen, index) {
   document.getElementById("detail-image").src = ramen.image;
   document.getElementById("detail-name").textContent = ramen.name;
   document.getElementById("detail-restaurant").textContent = ramen.restaurant;
   document.getElementById("detail-rating").textContent = ramen.rating;
   document.getElementById("detail-comment").textContent = ramen.comment;
+
+  const deleteButton = document.getElementById("delete-ramen");
+  deleteButton.style.display = "block";
+  deleteButton.onclick = () => deleteRamen(index);
+}
+
+// Delete ramen function
+function deleteRamen(index) {
+  ramens.splice(index, 1);
+  displayRamens();
+  if (ramens.length > 0) {
+    showDetails(ramens[0], 0);
+  } else {
+    clearDetails();
+  }
+}
+
+// Clear details when no ramens are left
+function clearDetails() {
+  document.getElementById("detail-image").src = "";
+  document.getElementById("detail-name").textContent = "";
+  document.getElementById("detail-restaurant").textContent = "";
+  document.getElementById("detail-rating").textContent = "";
+  document.getElementById("detail-comment").textContent = "";
+  document.getElementById("delete-ramen").style.display = "none";
 }
 
 // Add new ramen from form
@@ -83,7 +108,13 @@ function addSubmitListener() {
 function main() {
   displayRamens();
   addSubmitListener();
-  showDetails(ramens[0]); // Show first ramen on load
+  showDetails(ramens[0], 0); // Show first ramen on load
+
+  const deleteButton = document.createElement("button");
+  deleteButton.id = "delete-ramen";
+  deleteButton.textContent = "Delete Ramen";
+  deleteButton.style.display = "none";
+  document.getElementById("ramen-detail").appendChild(deleteButton);
 }
 
 document.addEventListener("DOMContentLoaded", main);
